@@ -12,8 +12,8 @@ fi
 
 # if there is a puppet master host defined, append the server and port parameters
 if [ ! -z "$PUPPETMASTER_TCP_HOST" ]; then 
-    # default puppet master port is 8410
-    test -z "$PUPPETMASTER_TCP_PORT" && export PUPPETMASTER_TCP_PORT="8410"
+    # default puppet master port is 8140
+    test -z "$PUPPETMASTER_TCP_PORT" && export PUPPETMASTER_TCP_PORT="8140"
     
     puppet_agent_args="$puppet_agent_args --server $PUPPETMASTER_TCP_HOST --masterport $PUPPETMASTER_TCP_PORT"
 fi
